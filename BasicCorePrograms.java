@@ -4,31 +4,21 @@ import java.util.Scanner;
 
 public class BasicCorePrograms 
 {
-	public void power(int n)
-	{
-	int a = 2, c = 1, res = 1;
-	if (n >= 31)
-	{
-	System.out.println("Invalid input");
+	public static void main(String[] args) {
+
+		double result = 0, num = 0, j;
+		int n;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter the Harmonic Value: ");
+		n = sc.nextInt();
+
+		for (j = 1; j <= n; j++) {
+			num = num + (1 / j);
+			result = num;
+		}
+		System.out.println("the value of harmonic no. " + n + " is: " + result);
+
 	}
-    if (n == 0)
-    {
-    res=1;
-    }
-    if(n < 31)
-    {
-    	do{    
-    		res = res * a;
-            System.out.println(a+ " to the power " +c+ " is " +res);    
-        c++;    
-        }while(c <= n);
-    }
-	}
-	public static void main(String[] args)
-	{
-	Scanner sc = new Scanner(System.in);
-	BasicCorePrograms obj = new BasicCorePrograms();
-	int d = sc.nextInt();
-	obj.power(d);
-	}
+
 }
