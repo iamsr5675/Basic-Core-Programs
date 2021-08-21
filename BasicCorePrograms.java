@@ -6,16 +6,17 @@ public class BasicCorePrograms
 {
 	
 	public static void main(String[] args) {
-		int x, y, t; 
+		int n; 
 	       Scanner sc = new Scanner(System.in);  
-	       System.out.println("Enter the value of X and Y");  
-	       x = sc.nextInt();  
-	       y = sc.nextInt();  
-	       System.out.println("Before Swapping Numbers: "+x +"  "+ y);    
-	       t = x;  
-	       x = y;  
-	       y = t;  
-	       System.out.println("After Swapping: "+x +"   " + y);  
-	       System.out.println( );  
+	       System.out.println("Enter the Number:");  
+	       n=sc.nextInt();
+	       if (n % 2 == 0)
+	       {
+	    	   System.out.println("Even Number");
+	       }
+	       else
+	       {
+	    	   System.out.println("Odd Number");
+	       }
 	    }    
 	}  
