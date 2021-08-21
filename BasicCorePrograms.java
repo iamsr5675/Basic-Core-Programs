@@ -4,26 +4,31 @@ import java.util.Scanner;
 
 public class BasicCorePrograms 
 {
-	public static void main(String args[])
+	public void power(int n)
+	{
+	int a = 2, c = 1, res = 1;
+	if (n >= 31)
+	{
+	System.out.println("Invalid input");
+	}
+    if (n == 0)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the year");
-        
-            int year = sc.nextInt(); 
-            if(year>999 && year<10000)
-            {
-                if(((year%4)==0 && (year%100)!=0)||(year%400)==0)
-                {
-                    System.out.println("Leap Year");
-                }
-                else
-                {
-                    System.out.println("Not a Leap Year");
-                }
-            }
-            else
-            {
-                System.out.println("Invalid Year");
-            }        
+    res=1;
     }
+    if(n < 31)
+    {
+    	do{    
+    		res = res * a;
+            System.out.println(a+ " to the power " +c+ " is " +res);    
+        c++;    
+        }while(c <= n);
+    }
+	}
+	public static void main(String[] args)
+	{
+	Scanner sc = new Scanner(System.in);
+	BasicCorePrograms obj = new BasicCorePrograms();
+	int d = sc.nextInt();
+	obj.power(d);
+	}
 }
